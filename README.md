@@ -33,16 +33,18 @@ $ python client.py
 
 You may deploy your server on your public IP address on one machine and try running client code on some other machine. In this case, Please do following changes:
 
-	## server.py
-	From
-	app.run()
-	To
-	app.run('YOUR_IP_ADDRESS') 
-	ex: app.run('0.0.0.0')
+### server.py
+From
+app.run()
 
-	## client.py
-	From
-	api_url = 'http://localhost:5000/' 
-	To
-	api_url = 'http://YOUR_IP_ADDRESS:5000/' 
+To
+app.run('YOUR_IP_ADDRESS') 
+ex: app.run('0.0.0.0')
+
+### client.py
+From
+api_url = 'http://localhost:5000/' 
+
+To
+api_url = 'http://YOUR_IP_ADDRESS:5000/' 
 
